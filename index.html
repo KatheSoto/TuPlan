@@ -1,11 +1,13 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" >
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">    
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
 <meta charset="utf-8">
 <title> Tu Plan Bogotá </title>
+<link href="css/estilos.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -14,7 +16,7 @@
 
 <div data-role="page" id="TuPlan">
 
-	<div data-role="header" data-position="fixed">
+	<div data-role="header">
 		<h1>Tu Plan </h1>
 	</div>
 
@@ -26,7 +28,7 @@
      <label for="text-1"> Contraseña </label>
      <input name="text-1" id="text-1" value="" type="text">
 		
-     <a href="#Inicio" class="ui-btn ui-btn-b"> Iniciar 				        sesión </a>
+     <a href="#Inicio" class="ui-btn ui-btn-b"> Iniciar sesión </a>
         
      <a href="#Registro" class="ui-btn ui-btn-b">
           Registrate</a>
@@ -38,7 +40,11 @@
 <div data-role="page" id="Registro">
 
 	<div data-role="header">
-		<h1> Registro </h1>
+    	<a href="#" data-rel="back" class="ui-btn ui-corner-all">
+        	<i class="fa fa-chevron-left fa-2x"></i>
+            <img src="Imagenes/Logo.png">
+        </a>
+		<h1>Registro</h1>
 	</div>
 	<div role="main" class="ui-content">
 		<p> Ingresa tus datos .</p>
@@ -55,8 +61,7 @@
      <label for="text-1"> Ciudad  </label>
      <input name="text-1" id="text-1" value="" type="text">
      
-     <label for="date-1"> Fecha de nacimiento
-     </label>
+     <label for="date-1"> Fecha de nacimiento</label>
      <input data-clear-btn="false" name="date-1" 
      id="date-1" value="" type="date">
      
@@ -65,18 +70,23 @@
      <input data-clear-btn="false" name="email-1"
       id="email-1" value="" type="email">
         
-    <a href="#intereses" class="ui-btn ui-btn-b">
+    <a href="#intereses1" class="ui-btn ui-btn-b">
      Siguiente </a>
   </div>
 </div>
 
 <!-- empieza page 3 -->
 
-<div data-role="page" id="intereses">
+<div data-role="page" id="intereses1">
 
 	<div data-role="header">
-		<h1>Intereses</h1>
-	</div><!-- /header -->
+    	<a href="#" data-rel="back" class="ui-btn ui-corner-all">
+        	<i class="fa fa-chevron-left fa-2x"></i>
+            <img src="Imagenes/Logo.png">
+        </a>
+		<h1>  TuPlan </h1>
+	</div>
+	
 
 	<div data-role="main" class="ui-content">
 	<p> Selecciona tus intereses </p>
@@ -110,70 +120,124 @@
         <label for="checkbox-v-2h"> Diversión </label>
     	</fieldset>
       </form>
+      
+	
+
 	<a href="#Inicio" class="ui-btn ui-btn-b"> Iniciar </a>
+    
+    
     
 	</div>
 </div><!-- /page -->
 
+
+<div data-role="page" id="MeInteresa">
+
+
+ <div data-role="header">
+    	<a href="#" data-rel="back" class="ui-btn ui-corner-all">
+        	<i class="fa fa-chevron-left fa-2x"></i>
+            <img src="Imagenes/Logo.png">
+        </a>
+		<h1>  TuPlan </h1>
+	</div>
+
+
+<div role="main" class="ui-content">
+		
+		<img class="ajustar" src="Imagenes/Conciert.jpg">
+        <img class="ajustar" src="Imagenes/Natural.jpg">
+        <img class="ajustar" src="Imagenes/Parque.png">
+        
+            <div data-role="collapsible" data-theme="b" data-content-theme="b">
+    		<h4> Me interesa </h4>
+    		<ul data-role="listview">
+                <li><a href="#InfoConcierto" data-transition="slide">Conciertos</a></li>
+                <li><a href="#InfoDeporte"data-transition="slide">Deportes</a></li>
+                <li><a href="#InfoDiversion"data-transition="slide">Diversión</a></li>
+                <li><a href="#InfoAmbiental"data-transition="slide">Plan ambiental</a></li>
+   			</ul>
+        </div>
+</div>        
+<div data-role="footer" data-position="fixed">
+        <div data-role="navbar" data-iconpos="bottom">
+            <ul>
+                <li><a href="#Inicio" <i class="fa fa-home fa-5x"></i>
+                </a></li>
+                <li><a href="#MeInteresa" <i class="fa fa-pencil fa-5x"></i>
+                </a></li>
+                <li><a href="#Perfil" <i class="fa fa-male fa-5x"></i>
+                </a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div><!-- /footer -->
+
+</div>
 <!-- Empieza page 4-->
 
 <div data-role="page" id="Inicio">
-		 <div data-role="header">
-        <div data-role="navbar">
-            <ul>
-                <li><a href="#Inicio" data-icon="home"></a></li>
-                <li><a href="#Perfil" data-icon="user" class= 
-                "ui-btn-active"></a></li>
-                <li><a href="#TuPlan" data-icon="gear"></a></li>
-            </ul>
-        </div>
-		<h1>Tu Plan Hoy</h1>
-  </div>
+	<div data-role="header">
+    	<a href="#" data-rel="back" class="ui-btn ui-corner-all">
+        	<i class="fa fa-chevron-left fa-2x"></i>
+            <img src="Imagenes/Logo.png">
+        </a>
+		<h1>  TuPlan </h1>
+	</div>
+    
+<div data-role="main" class="ui-content">
 
-<div data-role="main" id="ui-content">
+ <div data-role="header" data-theme="b">	
        
-         <img class="pop" src="img/100_8227.JPG" style="max-height:150px;">
+		<h1> TuPlan Hoy </h1>
+        </div
           
-         <img class="pop" src="../../Dropbox/Kathe/Especiales/378851_326409237372142_100000092054597_1427195_1485609399_n.jpg" style="max-height:150px;">
+        
+   ><img class="ajustar" src="Imagenes/Aainjaa.jpg">
+          <img class="ajustar" src="Imagenes/Conciert.jpg">
+          <img class="ajustar" src="Imagenes/running-verano-1.jpg">
+          <img class="ajustar" src="Imagenes/caminata-nocturna.jpg">
+		<img class="ajustar" src="Imagenes/salinas nemocon(1).jpeg">
+
          
          <div data-role="header" data-theme="b">	
        
 		<h1> Lo que viene </h1>
+		
 		</div>
-            
-   <a href="#popupParis" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="../../Dropbox/Kathe/Especiales/44289_152997008046700_2507757_n.jpg" alt="Paris, France" style="width:30%"></a>
-<a href="#popupSydney" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="../../Dropbox/Kathe/Especiales/402085_340292385993369_1087761642_n.jpg" alt="Sydney, Australia" style="width:30%"></a>
-<a href="#popupNYC" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="../../Dropbox/Kathe/Especiales/408112_364193326936608_297068042_n.jpg" alt="New York, USA" style="width:30%"></a>
-<div data-role="popup" id="popupParis" data-overlay-theme="b" data-theme="b" data-corners="false">
-    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="../../Dropbox/Kathe/Especiales/44289_152997008046700_2507757_n.jpg" style="max-height:512px;" alt="Paris, France">
-</div>
-<div data-role="popup" id="popupSydney" data-overlay-theme="b" data-theme="b" data-corners="false">
-    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="../../Dropbox/Kathe/Especiales/402085_340292385993369_1087761642_n.jpg" style="max-height:512px;" alt="Sydney, Australia">
-</div>
-<div data-role="popup" id="popupNYC" data-overlay-theme="b" data-theme="b" data-corners="false">
-    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="../../Dropbox/Kathe/Especiales/408112_364193326936608_297068042_n.jpg" style="max-height:512px;" alt="New York, USA">
-</div>
-</div>
+        
+        
+        
+</div>  
+     
+     
+     
+     
+     
+ <div data-role="footer" data-position="fixed">
+        <div data-role="navbar" data-iconpos="bottom">
+           <ul>
+                <li><a href="#Inicio" <i class="fa fa-home fa-5x"></i>
+                </a></li>
+                <li><a href="#MeInteresa" <i class="fa fa-pencil fa-5x"></i>
+                </a></li>
+                <li><a href="#Perfil" <i class="fa fa-male fa-5x"></i>
+                </a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div><!-- /footer -->
 
-<div data-role="footer">
-    	<div data-role="navbar">
-        <ul>
-            <li><a href="#" data-icon="back" data-theme="b">
-            </a></li>
-            <li><a href="#" data-icon="star" data-theme="b">
-            </a></li>
-        </ul>
-    	</div>
-</div>
 
 </div>
 
     <!-- Empieza page 5-->
 <div data-role="page" id="Perfil">
-
-	<div data-role="header">
-		<h1>Perfil</h1>
-	</div><!-- /header -->
+		<div data-role="header">
+    	<a href="#" data-rel="back" class="ui-btn ui-corner-all">
+        	<i class="fa fa-chevron-left fa-2x"></i>
+            <img src="Imagenes/Logo.png">
+        </a>
+		<h1>  TuPlan </h1>
+	</div>
 
 	<div role="main" class="ui-content">
     	<p> Nombres: </p>
@@ -183,49 +247,34 @@
      		<input type="file" data-clear-btn="false" name="file-1"
              id="file-1" value="">
 		 </form>
-	</div>
-   	
-		<div data-role="main" table data-role="table" class=
-        "ui-responsive" data-mode="columntoggle" id="my-table">
+
   			  <h4> Eventos a los que asistiré</h4>
-		</div>
-        <div data-role="collapsible" data-theme="b" 	
-        data-content-theme="b">
+        <div data-role="collapsible" data-theme="b" data-content-theme="b">
    			 <h4>Caminata nocturna</h4>
    				 <p>Info de evento.</p>
 		</div>
-		 <div data-role="collapsible" data-theme="b" 
-         data-content-theme="b">
+		 <div data-role="collapsible" data-theme="b" data-content-theme="b">
     		<h4>Presentación AINJJA</h4>
    				 <p>Info de evento.</p>
 		</div>
- 		<div data-role="collapsible" data-theme="b" 
-        data-content-theme="b">
+ 		<div data-role="collapsible" data-theme="b" data-content-theme="b">
    			<h4>Salsa al parque</h4>
    			 <p>Info de evento.</p>
 		</div>
-
-		<div data-role="collapsible" data-collapsed="false">
-    		<h4> Me interesa </h4>
-    		<ul data-role="listview">
-                <li><a href="#InfoConcierto">Conciertos</a></li>
-                <li><a href="#InfoDeporte">Deportes</a></li>
-                <li><a href="#InfoDiversion">Diversión</a></li>
-                <li><a href="#InfoAmbiental">Plan ambiental</a></li>
-   			</ul>
-        </div>
-	
-
-<div data-role="footer">
-    	<div data-role="navbar">
-        <ul>
-            <li><a href="#Inicio" data-icon="back" data-theme="b">
-            </a></li>
-            <li><a href="#Opciones" data-icon="star" data-theme="b">
-            </a></li>
-        </ul>
-    	</div>
 </div>
+		
+<div data-role="footer" data-position="fixed">
+        <div data-role="navbar" data-iconpos="bottom">
+            <ul>
+                <li><a href="#Inicio" <i class="fa fa-home fa-5x"></i>
+                </a></li>
+                <li><a href="#MeInteresa" <i class="fa fa-pencil fa-5x"></i>
+                </a></li>
+                <li><a href="#Perfil" <i class="fa fa-male fa-5x"></i>
+                </a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div><!-- /footer -->
  
     
 </div>
@@ -233,113 +282,103 @@
 <!-- Empieza page 6-->
     
 <div data-role="page" id="InfoConcierto">
-		 <div data-role="header">
-        <div data-role="navbar">
-            <ul>
-                <li><a href="#Inicio" data-icon="home"></a></li>
-                <li><a href="#Perfil" data-icon="user" class= 
-                "ui-btn-active"></a></li>
-                <li><a href="#TuPlan" data-icon="gear"></a></li>
-            </ul>
-        </div>
-</div>
-	
-    
-    
-    
+       <div data-role="header">
+    	<a href="#" data-rel="back" class="ui-btn ui-corner-all">
+        	<i class="fa fa-chevron-left fa-2x"></i>
+            <img src="Imagenes/Logo.png">
+        </a>
+           
+        </a>
+		<h1>  TuPlan </h1>
+	</div>
+ 
 <div data- role="main" class="ui-content" >
   
-   	 <img class="popphoto" src="../../Pictures/Series/Skins6.jpg"
-     style="max-height:150px;" > 
-     <img class="popphoto" src="../../Pictures/AmorMio.jpg" 
-        style="max-height:150px;">
-    
-    <form>
-    	<div class="ui-field-contain">
-         <label for="text-12"> Próximos conciertos </label>
-         <input type="text" name="text-12" id="text-12" value="">
-    	</div>
+   	 <img class="ajustar" src="Imagenes/en concierto.jpg" >
     	
-    	<div class="ui-field-contain">
-        <label for="textarea-12"> Artistas </label>
+   	<div class="ui-field-contain">
+        <label for="textarea-12">  CONCIERTO POR LA PAZ</label>
         <textarea cols="40" rows="8" name="textarea-12" id=
-        "textarea-12"></textarea>
-    	</div>
+        "textarea-12"> 
+       
+        19 de Mayo de 2014
+        A partir de las 4:30 pm</textarea>
+   	</div>
 	</form>		
-     	<p> Text inputs and textareas are coded with standard HTM
-        elements, then enhanced by jQuery Mobile to make them more 
-        attractive and useable on a mobile device. </p> 
-        
-	
+     	<p>         	
+            Como todos los años, se llecará a cabo el Concierto por la Paz en la Plaza de Bolivar. Con artistas como Calle 13, The Mills, Choquitown pondrán a vibrar la tarde del Viernes. </p> 
 
-<div data-role="footer">
-    	<div data-role="navbar">
-        	<ul>
-            <li><a href="#Inicio" data-icon="back" data-theme="b">
-            </a></li>
-            <li><a href="#Opciones" data-icon="star" data-theme="b">
-            </a></li>
-        	</ul>
-    	</div>
 
 </div>
+		
+<div data-role="footer" data-position="fixed">
+        <div data-role="navbar" data-iconpos="bottom">
+            <ul>
+                <li><a href="#Inicio" <i class="fa fa-home fa-5x"></i>
+                </a></li>
+                <li><a href="#MeInteresa" <i class="fa fa-pencil fa-5x"></i>
+                </a></li>
+                <li><a href="#Perfil" <i class="fa fa-male fa-5x"></i>
+                </a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div><!-- /footer -->
+
+
  
 </div>
-</div>
+
 
 <!-- Empieza page 7-->
 
 <div data-role="page" id="InfoDeporte">
-		 <div data-role="header">
-        <div data-role="navbar">
-            <ul>
-                <li><a href="#Inicio" data-icon="home"></a></li>
-                <li><a href="#Perfil" data-icon="user" class= 
-                "ui-btn-active"></a></li>
-                <li><a href="#TuPlan" data-icon="gear"></a></li>
-            </ul>
-        </div>
-</div>
+       <div data-role="header">
+    	<a href="#" data-rel="back" class="ui-btn ui-corner-all">
+        	<i class="fa fa-chevron-left fa-2x"></i>
+            <img src="Imagenes/Logo.png">
+        </a>
+		<h1>  TuPlan </h1>
+	</div>
 	
-    
-    
     
 <div data- role="main" class="ui-content" >
   
-    	<img class="popphoto" src"../../Pictures/Series/Skins6.jpg"
+    	<img class="ajustar" src="Imagenes/Deport.jpg"
          style="max-height:150px;" >
          
-        <img class="popphoto" src="../../Pictures/AmorMio.jpg"
-         style="max-height:150px;">
+
     
     <form>
+    
     	<div class="ui-field-contain">
-         <label for="text-12"> Próximos conciertos </label>
-         <input type="text" name="text-12" id="text-12" value="">
-    	</div>
-    	
-    	<div class="ui-field-contain">
-        <label for="textarea-12"> Artistas </label>
+        <label for="textarea-12"> Encuentro deportivo </label>
         <textarea cols="40" rows="8" name="textarea-12" id=
-        "textarea-12"></textarea>
+        "textarea-12"> 
+        Parque Simón Bolivar
+        Sábado 24 y Domingo 25 de Mayo 
+        Desde las 9:30 am a 4:30 pm </textarea>
     	</div>
 	</form>		
-     	<p> Text inputs and textareas are coded with standard HTML
-         elements, then enhanced by jQuery Mobile to make them more
-          attractive and useable on a mobile device. </p> 
+     	<p> El VI encuentro deportivo, tiene como objetivo motivar a los niños y jóvenes bogotanos a desarrollar habilidades deportivas. La diversidad en el deporte será el punto a favor en este evento y los asistentes tendrán la posibilidad de participar en cada uno de ellos ya que es completamente gratis. </p> 
 	
 
-<div data-role="footer">
-    	<div data-role="navbar">
-        <ul>
-            <li><a href="#Inicio" data-icon="back" data-theme="b">
-            </a></li>
-            <li><a href="#Opciones" data-icon="star" data-theme="b">
-            </a></li>
-        </ul>
-    	</div>
-        </div>
+
 </div>
+		
+<div data-role="footer" data-position="fixed">
+        <div data-role="navbar" data-iconpos="bottom">
+            <ul>
+                <li><a href="#Inicio" <i class="fa fa-home fa-5x"></i>
+                </a></li>
+                <li><a href="#MeInteresa" <i class="fa fa-pencil fa-5x"></i>
+                </a></li>
+                <li><a href="#Perfil" <i class="fa fa-male fa-5x"></i>
+                </a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div><!-- /footer -->
+ 
+ 
  
 </div>
 
@@ -347,115 +386,111 @@
 <!-- Empieza page 8-->
 
 <div data-role="page" id="InfoDiversion">
-		 <div data-role="header">
-        <div data-role="navbar">
-            <ul>
-                <li><a href="#Inicio" data-icon="home"></a></li>
-                <li><a href="#Perfil" data-icon="user" class= 
-                "ui-btn-active"></a></li>
-                <li><a href="#TuPlan" data-icon="gear"></a></li>
-            </ul>
-        </div>
-</div>
+       <div data-role="header">
+    	<a href="#" data-rel="back" class="ui-btn ui-corner-all">
+        	<i class="fa fa-chevron-left fa-2x"></i>
+            <img src="Imagenes/Logo.png">
+        </a>
+		<h1>  TuPlan </h1>
+	</div>
 	
     
     
     
 <div data- role="main" class="ui-content" >
   
-    <img class="popphoto" src="../../Pictures/Series/Skins6.jpg"
-     style="max-height:150px;" > 
-        <img class="popphoto" src="../../Pictures/AmorMio.jpg"
-         style="max-height:150px;">
+    <img class="ajustar" src="Imagenes/Conciert.jpg">
     
     <form>
-    	<div class="ui-field-contain">
-         <label for="text-12"> Próximos conciertos </label>
-         <input type="text" name="text-12" id="text-12" value="">
-    	</div>
+    	
     	
     	<div class="ui-field-contain">
-        <label for="textarea-12"> Artistas </label>
+        <label for="textarea-12"> Noche Jóven</label>
         <textarea cols="40" rows="8" name="textarea-12" id=
-        "textarea-12"></textarea>
+        "textarea-12"> 
+        DiscoBar "El Sitio "Parque de la 93
+        Sábado 31 de Mayo
+        Entrada desde las 7:00 pm
+        Valor entrada: $10.000 </textarea>
     	</div>
 	</form>		
-     	<p> Text inputs and textareas are coded with standard HTML
-         elements, then enhanced by jQuery Mobile to make them more
-          attractive and useable on a mobile device. </p> 
+     	<p> Con presentaciones de diversas agrupaciones colombianas se espera que esta noche dedicada a los jovenes, cumpla todas sus expectativas. La idea es gozar y disfrutar. 
+         </p> 
 </div>	
 
-<div data-role="footer">
-    	<div data-role="navbar">
-        	<ul>
-            <li><a href="#Inicio" data-icon="back" data-theme="b">
-            </a></li>
-            <li><a href="#Opciones" data-icon="star" data-theme="b">
-            </a></li>
-       		 </ul>
-    	</div>
-        </div>
 
+		
+<div data-role="footer" data-position="fixed">
+        <div data-role="navbar" data-iconpos="bottom">
+          <ul>
+                <li><a href="#Inicio" <i class="fa fa-home fa-5x"></i>
+                </a></li>
+                <li><a href="#MeInteresa" <i class="fa fa-pencil fa-5x"></i>
+                </a></li>
+                <li><a href="#Perfil" <i class="fa fa-male fa-5x"></i>
+                </a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div><!-- /footer -->
  
 
 </div>
 
 
 
-<!-- Empieza page 9-->
 <div data-role="page" id="InfoAmbiental">
-		 <div data-role="header">
-        <div data-role="navbar">
-            <ul>
-                <li><a href="#Inicio" data-icon="home"></a></li>
-                <li><a href="#Perfil" data-icon="user" class= 
-                "ui-btn-active"></a></li>
-                <li><a href="#TuPlan" data-icon="gear"></a></li>
-            </ul>
-        </div>
-</div>
+      <div data-role="header">
+    	<a href="#" data-rel="back" class="ui-btn ui-corner-all">
+        	<i class="fa fa-chevron-left fa-2x"></i>
+            <img src="Imagenes/Logo.png">
+        </a>
+		<h1>  TuPlan </h1>
+	</div>
 	
     
     
     
 <div data- role="main" class="ui-content" >
   
-    <img class="popphoto" src="../../Pictures/Series/Skins6.jpg"
+    <img class="popphoto" src="Imagenes/caminata-nocturna.jpg"
      style="max-height:150px;" > 
-        <img class="popphoto" src="../../Pictures/AmorMio.jpg" 
-        style="max-height:150px;">
+    
     
     <form>
-    	<div class="ui-field-contain">
-         <label for="text-12"> Próximos conciertos </label>
-         <input type="text" name="text-12" id="text-12" value="">
-    	</div>
+    
     	
     	<div class="ui-field-contain">
-        <label for="textarea-12"> Artistas </label>
+        <label for="textarea-12"> DeAmbiente </label>
         <textarea cols="40" rows="8" name="textarea-12" id=
-        "textarea-12"></textarea>
+        "textarea-12"> 
+        Parque Nacional
+        Jueves 05 de Junio
+        Desde las 5:00 pm a 9:30 pm 
+        </textarea>
     	</div>
 	</form>		
-    	 <p> Text inputs and textareas are coded with standard HTML
-          elements, then enhanced by jQuery Mobile to make them 
-          more attractive and useable on a mobile device. </p> 
-	
+     	<p> En una caminata por el Parque Nacional de Bogotá se busca que los asistentes dejen a un lado sus preocupaciones y le den un momento a la naturaleza y su belleza nocturna. </p> 
+</div>	
 
-<div data-role="footer">
-    	<div data-role="navbar">
-        <ul>
-            <li><a href="#Inicio" data-icon="back" data-theme="b">
-            </a></li>
-            <li><a href="#Opciones" data-icon="star" data-theme="b">
-            </a></li>
-        </ul>
-    	</div>
-        </div>
+		
+<div data-role="footer" data-position="fixed">
+        <div data-role="navbar" data-iconpos="bottom">
+		  <ul>
+                <li><a href="#Inicio" <i class="fa fa-home fa-5x"></i>
+                </a></li>
+                <li><a href="#MeInteresa" <i class="fa fa-pencil fa-5x"></i>
+                </a></li>
+                <li><a href="#Perfil" <i class="fa fa-male fa-5x"></i>
+                </a></li>
+            </ul>
+                  </div><!-- /navbar -->
+    </div><!-- /footer -->
 
- </div>
+ 
 
 </div>
+
 </body>
 </html>
+
 
